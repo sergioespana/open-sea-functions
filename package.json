@@ -1,0 +1,13 @@
+{
+  "name": "open-sea-functions",
+  "version": "0.0.1",
+  "description": "Cloud Functions for openSEA",
+  "main": "index.js",
+  "repository": "https://bitbucket.org/nielsrowinbik/open-sea-functions",
+  "author": "Niels Bik <nielsrowinbik@gmail.com>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-synacor": "^3.0.0"
+  }
+}
