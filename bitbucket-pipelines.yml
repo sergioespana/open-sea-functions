@@ -20,12 +20,7 @@ pipelines:
           artifacts:
             - functions/**
       - step:
-          name: Install deploy dependencies
-          script:
-            - npm i -g firebase-tools
-          artifacts:
-            - functions/**
-      - step:
           name: Deploy to production
           script:
+            - npm i -g firebase-tools
             - firebase deploy --token $FIREBASE_TOKEN
