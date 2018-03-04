@@ -7,21 +7,20 @@ pipelines:
         name: Build
         script:
           - cd ./functions
-          - npm i
-          - npm build
-          - cd ../
+          - yarn
+          - yarn build
   branches:
     master:
       - step:
           name: Build
           script:
             - cd ./functions
-            - npm i
-            - npm build
+            - yarn
+            - yarn build
           artifacts:
             - functions/**
       - step:
           name: Deploy to production
           script:
-            - npm i -g firebase-tools
+            - yarn global add firebase-tools
             - firebase deploy --token $FIREBASE_TOKEN
