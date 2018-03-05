@@ -21,6 +21,7 @@ pipelines:
             - functions/**
       - step:
           name: Deploy to production
+          deployment: production
           script:
             - yarn global add firebase-tools
             - firebase deploy --token $FIREBASE_TOKEN

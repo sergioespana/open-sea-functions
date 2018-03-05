@@ -1,6 +1,6 @@
 {
 	"name": "open-sea-functions",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Cloud Functions for openSEA",
 	"license": "GPL-3.0",
 	"author": "Niels Bik <hey@nielsbik.nl> (https://nielsbik.nl)",
