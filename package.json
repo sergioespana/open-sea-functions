@@ -1,13 +1,16 @@
 {
-  "name": "open-sea-functions",
-  "version": "0.1.0",
-  "description": "Cloud Functions for openSEA",
-  "main": "index.js",
-  "repository": "https://bitbucket.org/nielsrowinbik/open-sea-functions",
-  "author": "Niels Bik <nielsrowinbik@gmail.com>",
-  "license": "GPL-3.0",
-  "devDependencies": {
-    "eslint": "^4.18.2",
-    "eslint-config-synacor": "^3.0.0"
-  }
+	"name": "open-sea-functions",
+	"version": "0.1.3",
+	"description": "Cloud Functions for openSEA",
+	"license": "GPL-3.0",
+	"author": "Niels Bik <hey@nielsbik.nl> (https://nielsbik.nl)",
+	"main": "src/index.js",
+	"repository": "bitbucket:nielsrowinbik/open-sea-functions",
+	"scripts": {
+		"serve": "firebase serve --only functions"
+	},
+	"devDependencies": {
+		"eslint": "^4.18.2",
+		"eslint-config-synacor": "^3.0.0"
+	}
 }
