@@ -10,10 +10,7 @@ const files = glob.sync('./src/*.f.js', {
 	ignore: './node_modules/**'
 });
 
-files.forEach(file => {
-	let name = camelCase(file.slice(0, -5).split('/').join('_'));
-
-	!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === name
-		? (exports[name] = require(file))
-		: console.error('Something went wrong!');
+files.forEach((file, i) => {
+	const name = file.slice(0, -5).split('/').slice(-1)[0];
+	return (!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === name) && (exports[name] = require(file));
 });

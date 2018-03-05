@@ -6,8 +6,8 @@ const db = admin.firestore();
 export default functions.firestore.document('organisations/{orgId}').onCreate(async (event) => {
 	const { orgId } = event.params;
 	const data = event.data.data();
-	const owner = data.owner;
+	const creator = data.creator;
 
-	await db.doc(`organisations/${orgId}/users/${owner}`).set({ role: 'owner', added: new Date() });
-	return db.doc(`organisations/${orgId}`).update({ owner: admin.firestore.FieldValue.delete() });
+	await db.doc(`organisations/${orgId}/users/${creator}`).set({ role: 'owner', added: new Date() });
+	return db.doc(`organisations/${orgId}`).update({ creator: admin.firestore.FieldValue.delete() });
 });

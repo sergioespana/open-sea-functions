@@ -1,13 +1,13 @@
 {
 	"name": "open-sea-functions",
-	"version": "0.1.3",
+	"version": "0.2.0",
 	"description": "Cloud Functions for openSEA",
 	"license": "GPL-3.0",
 	"author": "Niels Bik <hey@nielsbik.nl> (https://nielsbik.nl)",
-	"main": "src/index.js",
+	"main": "functions/index.js",
 	"repository": "bitbucket:nielsrowinbik/open-sea-functions",
 	"scripts": {
-		"serve": "firebase serve --only functions"
+		"serve": "firebase experimental:functions:shell"
 	},
 	"devDependencies": {
 		"eslint": "^4.18.2",
