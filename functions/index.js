@@ -12,5 +12,5 @@ const files = glob.sync('./src/*.f.js', {
 
 files.forEach((file, i) => {
 	const name = file.slice(0, -5).split('/').slice(-1)[0];
-	return (!process.env.FUNCTION_NAME || process.env.FUNCTION_NAME === name) && (exports[name] = require(file));
+	return (exports[name] = require(file));
 });

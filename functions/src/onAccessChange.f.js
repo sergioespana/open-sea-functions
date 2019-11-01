@@ -3,8 +3,8 @@ const functions = require('firebase-functions');
 
 const db = admin.firestore();
 
-export default functions.firestore.document('organisations/{orgId}/users/{uid}').onWrite((event) => {
-	const { orgId, uid } = event.params;
+exports.myFunction = functions.firestore.document('organisations/{orgId}/users/{uid}').onWrite((change, context) => {
+	const { orgId, uid } = context.params;
 	const ref = db.doc(`users/${uid}/organisations/${orgId}`);
-	return event.data.exists ? ref.set(event.data.data()) : ref.delete();
+	return change.after.exists ? ref.set(change.after.data()) : ref.delete();
 });

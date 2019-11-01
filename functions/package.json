@@ -6,8 +6,8 @@
   },
   "dependencies": {
     "camelcase": "^4.1.0",
-    "firebase-admin": "^5.9.1",
-    "firebase-functions": "^0.8.1",
+    "firebase-admin": "^8.7.0",
+    "firebase-functions": "^3.3.0",
     "glob": "^7.1.2"
   },
   "private": true,
@@ -17,5 +17,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1"
+  },
+  "engines": {
+    "node": "8"
   }
 }
